@@ -8,9 +8,9 @@ Declare and assign the indexed array with your favourite food
 */
 $food = array(
 	"Ajiaco",
-	"Cuchuco de Trigo",
+	"Bandeja Paisa",
 	"Arequipe",
-	"Arepa de Maiz Amarillo"
+	"Arepa"
 );
 
 /*
@@ -56,9 +56,9 @@ Every key of food_assoc has the value that describes the type of food (salad, ma
 
 $food_assoc = array(
 	"Ajiaco"			=>	"Special Soup",
-	"Cuchuco de Trigo"	=>	"Super Powerful Soup",
+	"Bandeja Paisa"	=>	"Super Powerful Soup",
 	"Arequipe"			=>	"A piece of heaven on earth",
-	"Arepa de Maiz Amarillo"	=>	"Great Snack"
+	"Arepa"	=>	"Great Snack"
 );
 
 
@@ -95,37 +95,39 @@ and carries the information about the type and origin
 */
 
 $food_assoc = array(
-	"Name" => array(
-	"Name1"	=>	"Ajiaco",
-	"Name2"	=>	"Cuchuco de Trigo",
-	"Name3"	=>	"Arequipe",
-	"Name4"	=>	"Arepa de Maiz Amarillo"
+	"Ajiaco" => array(
+		"Name"		=> "Ajiaco",
+		"Type" 		=> "Special Soup", 
+		"Origin" 	=> "Bogota"
+	),
+	
+	"Bandeja Paisa"	=> array(
+		"Name"		=> 	"Bandeja Paisa",
+		"Type"		=>	"Main Course",
+		"Origin" 	=>	"Antioquia"
 		),
 	
-	"Type" => array(
-	"Name1"	=>	"Special Soup",
-	"Name2"	=>	"Super Powerful Soup",
-	"Name3"	=>	"Dessert",
-	"Name4"	=>	"Great Snack"
+	"Arequipe"		=> array(
+		"Name"		=> "Arequipe",
+		"Type"		=>	"Desert",
+		"Origin"	=>	"Heaven!"
 		),
-	
-	"Origin" => array(
-	"Name1"	=>	"Bogota",
-	"Name2"	=>	"Eastern Mountain Range",
-	"Name3"	=>	"From Heaven!",
-	"Name4"	=>	"Eastern Mountain Range"
-	)
-	);
+	"Arepa"		=> array(
+		"Name"		=> "Arepa",
+		"Type"		=>	"Snack",
+		"Origin"	=>	"Anywhere in Colombia"
+		)
+);
 /*
 Print every food, type and origin in the separate lines so it renders like this:
 pizza | main counrse | Italy
 cheesesake | desert | Greece
 */
 
-echo $food_assoc['Name']['Name1']," | ",$food_assoc['Type']['Name1']," | ", $food_assoc['Origin']['Name1']," | <br>";
-echo $food_assoc['Name']['Name2']," | ",$food_assoc['Type']['Name2']," | ", $food_assoc['Origin']['Name2']," | <br>";
-echo $food_assoc['Name']['Name3']," | ",$food_assoc['Type']['Name3']," | ", $food_assoc['Origin']['Name3']," | <br>";
-echo $food_assoc['Name']['Name4']," | ",$food_assoc['Type']['Name4']," | ", $food_assoc['Origin']['Name4']," | <br>";
+echo "{$food_assoc['Ajiaco']['Name']} | {$food_assoc['Ajiaco']['Type']} | {$food_assoc['Ajiaco']['Origin']} <br>";
+echo "{$food_assoc['Bandeja Paisa']['Name']} | {$food_assoc['Bandeja Paisa']['Type']} | {$food_assoc['Bandeja Paisa']['Origin']} <br>"; 
+echo "{$food_assoc['Arequipe']['Name']} | {$food_assoc['Arequipe']['Type']} | {$food_assoc['Arequipe']['Origin']} <br>";
+echo "{$food_assoc['Arepa']['Name']} | {$food_assoc['Arepa']['Type']} | {$food_assoc['Arepa']['Origin']} <br>";
 
 // task separator
 echo "<hr style=\"margin 1rem 0\">";
@@ -137,28 +139,28 @@ echo "<hr style=\"margin 1rem 0\">";
 +---+
 Print the array from task 4 in html table:
 -->
-<table>
+<table style = "border: 4px solid black;">
   <tr>
     <th>FOOD</th>
     <th>TYPE</th>
     <th>ORIGIN</th>
   </tr>
   <tr>
-    <td><?php echo $food_assoc['Name']['Name1']; ?></td>
-    <td><?php echo $food_assoc['Type']['Name1']; ?></td>
-    <td><?php echo $food_assoc['Origin']['Name1']; ?></td>
+    <td><?php echo $food_assoc['Ajiaco']['Name']; ?></td>
+    <td><?php echo $food_assoc['Ajiaco']['Type']; ?></td>
+    <td><?php echo $food_assoc['Ajiaco']['Origin']; ?></td>
   </tr>
   <tr>
-    <td><?php echo $food_assoc['Name']['Name2']; ?></td>
-    <td><?php echo $food_assoc['Type']['Name2']; ?></td>
-    <td><?php echo $food_assoc['Origin']['Name2']; ?></td>
+    <td><?php echo $food_assoc['Bandeja Paisa']['Name']; ?></td>
+    <td><?php echo $food_assoc['Bandeja Paisa']['Type']; ?></td>
+    <td><?php echo $food_assoc['Bandeja Paisa']['Origin']; ?></td>
   </tr>
-    <td><?php echo $food_assoc['Name']['Name3']; ?></td>
-    <td><?php echo $food_assoc['Type']['Name3']; ?></td>
-    <td><?php echo $food_assoc['Origin']['Name3']; ?></td>
+    <td><?php echo $food_assoc['Arequipe']['Name']; ?></td>
+    <td><?php echo $food_assoc['Arequipe']['Type']; ?></td>
+    <td><?php echo $food_assoc['Arequipe']['Origin']; ?></td>
   <tr>
-    <td><?php echo $food_assoc['Name']['Name4']; ?></td>
-    <td><?php echo $food_assoc['Type']['Name4']; ?></td>
-    <td><?php echo $food_assoc['Origin']['Name4']; ?></td>
+    <td><?php echo $food_assoc['Arepa']['Name']; ?></td>
+    <td><?php echo $food_assoc['Arepa']['Type']; ?></td>
+    <td><?php echo $food_assoc['Arepa']['Origin']; ?></td>
   </tr>
 </table>
